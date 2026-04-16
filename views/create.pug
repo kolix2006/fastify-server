@@ -1,0 +1,19 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Создать пользователя
+    link(rel="stylesheet" href="/public/style.css")
+  body
+    .container
+      h1 Новый пользователь
+      form(action="/users" method="POST")
+        .field
+          label(for="name") Имя
+          input#name(type="text" name="name" placeholder="Введите имя" required)
+        .field
+          label(for="email") Email
+          input#email(type="email" name="email" placeholder="example@mail.com" required)
+        button(type="submit") Создать
+      a.back(href="/users") ← Назад к списку

@@ -1,0 +1,27 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Список пользователей
+    link(rel="stylesheet" href="/public/style.css")
+  body
+    .container
+      h1 Пользователи
+      a.btn(href="/users/create") + Добавить пользователя
+
+      if users.length === 0
+        p.empty Пользователей пока нет.
+      else
+        table
+          thead
+            tr
+              th ID
+              th Имя
+              th Email
+          tbody
+            each user in users
+              tr
+                td= user.id
+                td= user.name
+                td= user.email
