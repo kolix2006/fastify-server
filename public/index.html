@@ -2,16 +2,18 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fastify App</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Manager</title>
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Fastify сервер</h1>
-    <button id="requestBtn">Сделать запрос на АПИ</button>
-    <p id="status"></p>
-  </div>
-  <script src="main.js"></script>
+  <nav class="navbar">
+    <a href="#/" data-link>🏠 Главная</a>
+    <a href="#/create" data-link>+ Создать</a>
+  </nav>
+
+  <main id="app" class="container"></main>
+
+  <script type="module" src="/main.js"></script>
 </body>
 </html>
